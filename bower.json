@@ -1,0 +1,22 @@
+{
+  "name": "Towar Template",
+  "authors": [
+    "Nazar <Kotsuyba@gmail.com>"
+  ],
+  "description": "Teplate for somthing, with GSAP animation",
+  "main": "main.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "gsap": "^1.19.1"
+  }
+}
