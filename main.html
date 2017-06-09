@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <div class="slider">
+                <div class="inner1">
+                    <!-- <ul class="rslides">
+                    <li><img src="images/img-1.png" alt=""></li>
+                    <li><img src="images/img-2.png" alt=""></li>
+                    <li><img src="images/img-3.png" alt=""></li>
+                </ul> -->
+                </div>
+                <div class="inner2"></div>
+            </div>
+            <div class="information">
+                <h1>OnePlus 3T Gunmetal 64GB</h1>
+                <hr>
+                <div class="colorCard">
+                    <div class="optionCard">
+                        <input id="colorGunmetal" type="radio" class="radio colorRadio" name="ATcolor" value="Gunmetal" checked="checked">
+                        <label for="colorGunmetal">Gunmetal</label>
+                    </div>
+                    <div class="optionCard">
+                        <input id="colorSoftGold" type="radio" class="radio colorRadio" name="ATcolor" value="Soft Gold">
+                        <label for="colorSoftGold">Soft Gold</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="memoryCard">
+                    <div class="optionCard memoryOption">
+                        <input id="_64" type="radio" class="radio memoryRadio" name="memory" value="64 GB">
+                        <label for="_64">64 GB</label>
+                    </div>
+                    <div class="optionCard memoryOption">
+                        <input id="_32" type="radio" class="radio memoryRadio" name="memory" value="32 GB" checked="checked">
+                        <label for="_32">32 GB</label>
+                    </div>
+                    <div class="optionCard memoryOption">
+                        <input id="_16" type="radio" class="radio memoryRadio" name="memory" value="16 GB">
+                        <label for="_16">16 GB</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="shortInfo">
+                    <ul>
+                        <li>Display: 5.5''</li>
+                        <li>Camera: 16MP</li>
+                        <li>RAM: 6GB</li>
+                        <li>Battery: 3400mAh</li>
+                        <li>Android: 6.0.1 - 7.1.1</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="scripts/responsiveslides.js"></script>
+    <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+    <script id="handlebars-slider" type="text/x-handlebars-template">
+        <ul class="rslides">
+            {{#each gunmetal.slider1 }}
+            <li><img src="{{this}}" alt=""></li>
+            {{/each}}
+        </ul>
+    </script>
+<script id="handlebars-slider2" type="text/x-handlebars-template">
+        <ul class="rslides">
+            {{#each softGold.slider2 }}
+            <li><img src="{{this}}" alt=""></li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+
+</html>
