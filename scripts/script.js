@@ -18,11 +18,13 @@ $(function() {
 
         }
     };
-    // consoleVal("Gunmetal");
+    (function doHandlebars() {
     var template = $("#handlebars-slider").html();
     var templateScript = Handlebars.compile(template);
     var html = templateScript(myJson);
     $(".slider .inner1").append(html);
+        
+    })();
     $(".rslides").responsiveSlides({
         auto: false,
         pager: true
@@ -32,34 +34,22 @@ $(function() {
     for (var i = 0; i < colorRadio.length; i++) {
         colorRadio[i].addEventListener("click", function(e) {
             if (this.checked) {
-                // console.log(this.value);
                 consoleVal(this.value);
-                // return radioVal = this.value;
             }
         });
     }
 
     function consoleVal(radioVal) {
 
-        if (radioVal === "Gunmetal") {
-
+        if (radioVal === "Soft Gold") {
+            $(".rslides li img").each(function(index, el) {
+                el.setAttribute("src", myJson.softGold.slider2[index]);
+            });
         } else {
-            template = $("#handlebars-slider2").html();
-            templateScript = Handlebars.compile(template);
-            html = templateScript(myJson);
-            $(".slider .inner1 .rslides").replaceWith(html);
-//             $(document).on('click',this,function(){
-//    alert( 'success' );
-// });
-            // doAnimation(jQuery, this, 0);
-            
+            $(".rslides li img").each(function(index, el) {
+                el.setAttribute("src", myJson.gunmetal.slider1[index]);
+            });
         }
-        // Handlebars.registerHelper("SliderChooser", function(radioVal) {
-        // });
-
 
     }
 });
-window.onload = function() {
-
-};
